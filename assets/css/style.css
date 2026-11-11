@@ -1,0 +1,1179 @@
+
+/* =====================================
+   AEROVISTA DRONE - DARK GREEN THEME
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --forest: #071f18;
+  --forest-2: #0b2d22;
+  --forest-3: #123d2d;
+  --green: #70b58a;
+  --lime: #b7df79;
+  --cream: #f1f5ec;
+  --white: #ffffff;
+  --muted: #a8b9ad;
+  --dark-text: #14251c;
+  --max: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--dark-text);
+  background: var(--cream);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: min(var(--max), calc(100% - 48px));
+  margin-inline: auto;
+}
+
+.section-space {
+  padding: 100px 0;
+}
+
+/* NAVBAR */
+
+.site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 20;
+  background: rgba(5, 25, 18, .82);
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  backdrop-filter: blur(14px);
+}
+
+.navbar {
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+  font: 800 19px Manrope,sans-serif;
+}
+
+.brand img {
+  width: 43px;
+  height: 43px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.brand-light {
+  color: var(--lime);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  color: #e6eee7;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.nav-link {
+  transition: color .2s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--lime);
+}
+
+.nav-cta {
+  padding: 13px 19px;
+  border: 1px solid rgba(183,223,121,.7);
+  border-radius: 4px;
+  color: var(--lime);
+  transition: .2s;
+}
+
+.nav-cta:hover {
+  background: var(--lime);
+  color: var(--forest);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: white;
+  margin: 5px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 760px;
+  height: 100vh;
+  max-height: 900px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  background: var(--forest);
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg,rgba(3,20,14,.88) 0%,rgba(4,28,19,.66) 48%,rgba(4,28,19,.12) 100%),
+    linear-gradient(0deg,rgba(3,20,14,.42),transparent 45%),
+    url('../images/hero-drone-sunset.jpg') center/cover no-repeat;
+  transform: scale(1.02);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 70px;
+}
+
+.eyebrow {
+  color: var(--lime);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+}
+
+.eyebrow-line {
+  display: inline-block;
+  width: 30px;
+  height: 1px;
+  background: var(--lime);
+  vertical-align: middle;
+  margin-right: 12px;
+}
+
+.eyebrow.dark {
+  color: #527d5d;
+}
+
+.hero h1 {
+  max-width: 850px;
+  font: 800 clamp(48px,7vw,88px)/1.06 Manrope,sans-serif;
+  letter-spacing: -4px;
+}
+
+.hero h1 span,
+.intro h2 span,
+.section-heading h2 span,
+.product-info h2 span,
+.contact-box h2 span {
+  color: var(--green);
+}
+
+.hero-copy {
+  max-width: 590px;
+  color: #d3dfd6;
+  font-size: 15px;
+  line-height: 1.9;
+  margin: 26px 0 30px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 16px 23px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  transition: .25s;
+}
+
+.btn-primary {
+  background: var(--lime);
+  color: #102719;
+  border: 1px solid var(--lime);
+}
+
+.btn-primary:hover {
+  background: #d0f19a;
+  transform: translateY(-3px);
+}
+
+.btn-ghost {
+  border: 1px solid rgba(255,255,255,.55);
+  color: white;
+}
+
+.btn-ghost:hover {
+  background: white;
+  color: var(--forest);
+}
+
+.hero-note {
+  margin-top: 38px;
+  color: #d2dfd5;
+  font-size: 11px;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background: var(--lime);
+  border-radius: 50%;
+  margin-right: 9px;
+  box-shadow: 0 0 12px var(--lime);
+}
+
+.hero-index {
+  position: absolute;
+  right: max(24px,calc((100% - var(--max))/2));
+  bottom: 55px;
+  color: var(--lime);
+  font: 700 14px Manrope;
+}
+
+.hero-index span {
+  color: rgba(255,255,255,.5);
+}
+
+.scroll-cue {
+  position: absolute;
+  right: max(24px,calc((100% - var(--max))/2));
+  bottom: 27px;
+  color: #d2dfd5;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+/* INTRO */
+
+.intro {
+  background: var(--cream);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 90px;
+  align-items: end;
+}
+
+.intro h2,
+.section-heading h2 {
+  font: 800 clamp(32px,4vw,48px)/1.2 Manrope,sans-serif;
+  letter-spacing: -1.8px;
+  color: var(--forest);
+}
+
+.intro-text p,
+.section-heading > p {
+  color: #647469;
+  font-size: 13px;
+  line-height: 2;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 22px;
+  color: #326b48;
+  font-size: 12px;
+  font-weight: 700;
+  border-bottom: 1px solid #8eae94;
+  padding-bottom: 7px;
+}
+
+/* SERVICES */
+
+.services {
+  background: #e6eee3;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 50px;
+  margin-bottom: 48px;
+}
+
+.section-heading > p {
+  max-width: 350px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 22px;
+}
+
+.service-card {
+  background: #fff;
+  padding-bottom: 27px;
+  box-shadow: 0 12px 35px rgba(13,47,30,.06);
+  transition: transform .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+}
+
+.service-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.service-number {
+  color: #699174;
+  font-size: 9px;
+  letter-spacing: 2px;
+  margin: 23px 24px 10px;
+}
+
+.service-card h3 {
+  color: var(--forest);
+  font: 700 20px Manrope;
+  margin: 0 24px 10px;
+}
+
+.service-card p {
+  color: #718075;
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0 24px;
+}
+
+/* PRODUCT */
+
+.product-section {
+  background: #f4f6ef;
+}
+
+.product-heading {
+  margin-bottom: 42px;
+}
+
+.product-showcase {
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  gap: 45px;
+  align-items: center;
+}
+
+.product-feature {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 45px;
+  align-items: center;
+}
+
+.product-image-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #dbe6d8;
+}
+
+.product-image-wrap img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+}
+
+.image-tag {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  background: rgba(7,31,24,.88);
+  color: var(--lime);
+  padding: 10px 13px;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.product-info .eyebrow {
+  color: #638b69;
+}
+
+.product-info h2 {
+  color: var(--forest);
+  font: 800 clamp(30px,3.5vw,42px)/1.2 Manrope;
+  letter-spacing: -1.5px;
+  margin: 0 0 18px;
+}
+
+.product-info > p:not(.eyebrow) {
+  color: #69786c;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.feature-list {
+  list-style: none;
+  margin: 22px 0 26px;
+}
+
+.feature-list li {
+  color: #405b47;
+  font-size: 11px;
+  margin: 12px 0;
+}
+
+.product-benefits {
+  border-left: 1px solid #d3dfd1;
+  padding-left: 28px;
+}
+
+.product-benefits > div {
+  padding: 17px 0;
+  border-bottom: 1px solid #dce5d9;
+}
+
+.product-benefits > div:last-child {
+  border-bottom: 0;
+}
+
+.benefit-icon {
+  font-size: 24px;
+  color: #4f9364;
+}
+
+.product-benefits h3 {
+  font: 700 15px Manrope;
+  margin: 7px 0;
+  color: var(--forest);
+}
+
+.product-benefits p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #718075;
+}
+
+/* STATISTIK */
+
+.stats {
+  background: var(--forest);
+  color: white;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(3,1fr);
+  gap: 35px;
+  align-items: center;
+}
+
+.stats-intro h2 {
+  font: 700 26px/1.35 Manrope;
+}
+
+.stat strong {
+  color: var(--lime);
+  font: 800 49px Manrope;
+  letter-spacing: -2px;
+}
+
+.stat strong span {
+  font-size: 25px;
+}
+
+.stat p {
+  color: #b7c9bb;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.stats-disclaimer {
+  font-size: 9px;
+  color: #8fa99a;
+  margin-top: 28px;
+}
+
+/* BANNER ALAM */
+
+.nature-section {
+  min-height: 570px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  background: var(--forest);
+}
+
+.nature-section > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nature-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(4,26,17,.88),
+    rgba(4,26,17,.35)
+  );
+}
+
+.nature-content {
+  position: relative;
+  z-index: 1;
+  padding-block: 90px;
+}
+
+.nature-content h2 {
+  font: 800 clamp(38px,5vw,62px)/1.15 Manrope;
+  letter-spacing: -2px;
+}
+
+.nature-content h2 span {
+  color: var(--lime);
+}
+
+.nature-link {
+  display: inline-flex;
+  gap: 15px;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 25px;
+  border-bottom: 1px solid rgba(255,255,255,.6);
+  padding-bottom: 8px;
+}
+
+/* KONTAK */
+
+.contact-section {
+  background: var(--cream);
+}
+
+.contact-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 45px;
+  padding: 55px 60px;
+  background: #e3ecdf;
+  border: 1px solid #d4e1d1;
+}
+
+.contact-box h2 {
+  color: var(--forest);
+  font: 800 clamp(32px,4vw,46px)/1.2 Manrope;
+  letter-spacing: -1.5px;
+}
+
+.contact-box > div > p:last-child {
+  color: #66776a;
+  max-width: 510px;
+  font-size: 12px;
+  line-height: 1.9;
+  margin-top: 16px;
+}
+
+/* FOOTER */
+
+.footer {
+  background: #041710;
+  color: #b9c8bd;
+  padding: 28px 0;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.footer-brand {
+  font-size: 16px;
+}
+
+.footer-brand img {
+  width: 34px;
+  height: 34px;
+}
+
+.footer-inner > p,
+.footer-inner > span {
+  font-size: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+  .nav-menu {
+    gap: 18px;
+  }
+
+  .intro-grid {
+    gap: 40px;
+  }
+
+  .product-showcase {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .product-benefits {
+    border-left: 0;
+    border-top: 1px solid #d3dfd1;
+    padding: 8px 0 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 18px;
+  }
+
+  .product-benefits > div {
+    border-bottom: 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: min(100% - 34px, var(--max));
+  }
+
+  .section-space {
+    padding: 70px 0;
+  }
+
+  .navbar {
+    min-height: 70px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 22px;
+    background: #071f18;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-cta {
+    text-align: center;
+  }
+
+  .hero {
+    min-height: 720px;
+    height: 90vh;
+  }
+
+  .hero-bg {
+    background-position: 58% center;
+  }
+
+  .hero h1 {
+    font-size: clamp(43px,12vw,65px);
+    letter-spacing: -2.5px;
+  }
+
+  .hero-copy {
+    font-size: 13px;
+  }
+
+  .hero-index,
+  .scroll-cue {
+    display: none;
+  }
+
+  .intro-grid,
+  .product-feature {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .section-heading {
+    display: block;
+  }
+
+  .section-heading > p {
+    margin-top: 18px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card img {
+    height: 240px;
+  }
+
+  .product-image-wrap img {
+    height: 290px;
+  }
+
+  .product-benefits {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .product-benefits > div {
+    border-bottom: 1px solid #dce5d9;
+    padding: 14px 0;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 28px 18px;
+  }
+
+  .stats-intro {
+    grid-column: 1/-1;
+  }
+
+  .nature-section {
+    min-height: 500px;
+  }
+
+  .contact-box {
+    display: block;
+    padding: 35px 25px;
+  }
+
+  .contact-box .btn {
+    margin-top: 25px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =====================================
+   ABOUT US - AEROVISTA DARK GREEN
+===================================== */
+
+/* ABOUT HERO */
+
+.about-hero {
+  min-height: 720px;
+  height: 90vh;
+  max-height: 850px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: #071f18;
+  color: white;
+}
+
+.about-hero-image {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,20,14,.93),
+      rgba(4,28,19,.72),
+      rgba(4,28,19,.25)
+    ),
+    url('../images/hero-drone-sunset.jpg')
+    center/cover no-repeat;
+  opacity: .9;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 100px;
+}
+
+.about-hero h1 {
+  font: 800 clamp(48px,7vw,88px)/1.08 Manrope,sans-serif;
+  letter-spacing: -4px;
+  max-width: 800px;
+}
+
+.about-hero h1 em {
+  color: #b7df79;
+  font-style: italic;
+}
+
+.about-hero-description {
+  color: #d2dfd5;
+  max-width: 600px;
+  font-size: 14px;
+  line-height: 1.9;
+  margin-top: 25px;
+}
+
+.about-hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.about-breadcrumb {
+  margin-top: 65px;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #a8b9ad;
+}
+
+.about-breadcrumb span {
+  color: #b7df79;
+  margin: 0 10px;
+}
+
+/* STORY */
+
+.about-story {
+  background: #f1f5ec;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 75px;
+  align-items: center;
+}
+
+.story-image {
+  position: relative;
+  min-height: 480px;
+  background: #dce8dc;
+}
+
+.story-image img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.story-image-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #071f18;
+  color: #b7df79;
+  padding: 17px 22px;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.story-image-label span {
+  margin-right: 15px;
+  color: white;
+}
+
+.story-content h2 {
+  font: 800 clamp(32px,4vw,48px)/1.2 Manrope;
+  color: #071f18;
+  letter-spacing: -2px;
+  margin-bottom: 25px;
+}
+
+.story-content h2 span {
+  color: #70b58a;
+}
+
+.story-content > p:not(.eyebrow) {
+  color: #68796d;
+  font-size: 13px;
+  line-height: 2;
+  margin-bottom: 15px;
+}
+
+/* VISION MISSION */
+
+.about-vision {
+  background: #071f18;
+  color: white;
+}
+
+.vision-heading {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.vision-heading h2 {
+  font: 800 clamp(35px,5vw,55px)/1.2 Manrope;
+  letter-spacing: -2px;
+}
+
+.vision-heading h2 span {
+  color: #b7df79;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.vision-card {
+  padding: 38px;
+  background: #0b2d22;
+  border: 1px solid rgba(183,223,121,.2);
+  transition: .3s;
+}
+
+.vision-card:hover {
+  transform: translateY(-6px);
+  border-color: #b7df79;
+}
+
+.vision-number {
+  color: #b7df79;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.vision-icon {
+  font-size: 40px;
+  color: #b7df79;
+  margin: 25px 0;
+}
+
+.vision-card h3 {
+  font: 700 25px Manrope;
+  margin-bottom: 15px;
+}
+
+.vision-card p {
+  color: #b8c9bc;
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* VALUES */
+
+.about-values {
+  background: #e6eee3;
+}
+
+.values-heading {
+  max-width: 650px;
+  margin-bottom: 45px;
+}
+
+.values-heading h2 {
+  color: #071f18;
+  font: 800 clamp(35px,5vw,55px)/1.2 Manrope;
+  letter-spacing: -2px;
+}
+
+.values-heading h2 span {
+  color: #70b58a;
+}
+
+.values-heading > p:last-child {
+  color: #68796d;
+  font-size: 13px;
+  line-height: 1.9;
+  margin-top: 15px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 18px;
+}
+
+.value-card {
+  position: relative;
+  min-height: 250px;
+  padding: 27px 22px;
+  background: #f7f9f4;
+  border-bottom: 3px solid #70b58a;
+  transition: .3s;
+}
+
+.value-card:hover {
+  transform: translateY(-7px);
+  background: #071f18;
+  color: white;
+}
+
+.value-icon {
+  display: block;
+  color: #4f9364;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.value-number {
+  position: absolute;
+  top: 28px;
+  right: 22px;
+  color: #a0b5a1;
+  font-size: 10px;
+}
+
+.value-card h3 {
+  font: 700 18px Manrope;
+  margin-bottom: 12px;
+}
+
+.value-card p {
+  color: #758477;
+  font-size: 11px;
+  line-height: 1.9;
+}
+
+.value-card:hover p,
+.value-card:hover .value-number {
+  color: #c2d2c5;
+}
+
+/* BANNER */
+
+.about-banner {
+  min-height: 520px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background:
+    url('../images/coastal-landscape.jpg')
+    center/cover no-repeat;
+  color: white;
+}
+
+.about-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3,20,14,.92),
+    rgba(4,28,19,.45)
+  );
+}
+
+.about-banner-content {
+  position: relative;
+  z-index: 2;
+  padding-top: 75px;
+  padding-bottom: 75px;
+}
+
+.about-banner h2 {
+  font: 800 clamp(38px,5vw,65px)/1.15 Manrope;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+}
+
+.about-banner h2 span {
+  color: #b7df79;
+}
+
+/* RESPONSIVE ABOUT */
+
+@media (max-width: 800px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .values-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .about-hero {
+    min-height: 720px;
+    height: 90vh;
+  }
+
+  .about-hero h1 {
+    font-size: clamp(42px,12vw,62px);
+    letter-spacing: -2px;
+  }
+
+  .about-hero-description {
+    font-size: 12px;
+  }
+
+  .about-breadcrumb {
+    margin-top: 45px;
+  }
+
+  .story-image,
+  .story-image img {
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-card {
+    padding: 28px;
+  }
+
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .value-card {
+    min-height: 210px;
+  }
+}
